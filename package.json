@@ -1,0 +1,43 @@
+{
+  "name": "react-native-uiscene-bridge",
+  "version": "0.1.0",
+  "description": "Stops React Native and Expo apps built with Xcode 27 from crashing at launch with \"UIScene life cycle is required for apps built with this SDK\". Install it, run pod install, no code changes.",
+  "files": [
+    "ios",
+    "react-native-uiscene-bridge.podspec",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "sh test/run.sh"
+  },
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "license": "MIT",
+  "author": "Tom Ryan",
+  "keywords": [
+    "react-native",
+    "expo",
+    "ios",
+    "ios-27",
+    "xcode-27",
+    "uiscene",
+    "scene-delegate",
+    "scenedelegate",
+    "crash",
+    "launch"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atomics-hub/react-native-uiscene-bridge.git"
+  },
+  "homepage": "https://github.com/Atomics-hub/react-native-uiscene-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/Atomics-hub/react-native-uiscene-bridge/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
