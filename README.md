@@ -80,7 +80,8 @@ Xcode 27.0 (27A266a) on macOS 27.0, iPhone 18 Pro simulator on iOS 27.0.
 | Apps that declare a scene, in code or in `Info.plist` | | Launch with their own scene delegate. The bridge stays out |
 
 The last two rows are automated: `npm test` builds those apps and runs them in the booted
-simulator, and CI runs it on GitHub's Xcode 27 image. Five copies of the bridge, each with one behaviour removed, each fail the check for it.
+simulator, and CI runs it on GitHub's Xcode 27 image. Five copies of the bridge, each with one
+behaviour removed, each fail the check for it.
 
 ## Limits
 
