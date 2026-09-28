@@ -18,7 +18,11 @@ jobs:
           xcrun simctl bootstatus "$udid" -b
       - run: npm test
   older-sdk:
-    runs-on: macos-15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, macos-26]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Compiles to nothing with an SDK before iOS 27
