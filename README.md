@@ -13,6 +13,18 @@ Application failed to launch: UIScene life cycle is required for apps built with
 The crash report shows `EXC_BREAKPOINT (SIGTRAP)` in
 `___UIApplicationEvaluateRuntimeIssueForNoSceneLifecycleAdoption_block_invoke`.
 
+## Do you need it?
+
+| Your app | Built with Xcode 27 |
+| --- | --- |
+| React Native 0.87 or earlier | Crashes at launch. Use this package |
+| Expo SDK 57 or earlier (React Native 0.86 or earlier) | Crashes at launch. Use this package |
+| React Native 0.88+ or Expo SDK 58+, using the scene delegate | Launches. You don't need this |
+| Built with Xcode 26 or earlier | Launches. The pod compiles to nothing |
+
+The bridge is a stopgap until you upgrade. Once your app declares a scene, it does nothing, and you
+can remove it.
+
 ## Install
 
 React Native:
@@ -42,9 +54,9 @@ runs.
 React Native's templates create their window in `application:didFinishLaunchingWithOptions:` and
 declare no scene. React Native adds scene support in 0.88
 ([facebook/react-native#57700](https://github.com/facebook/react-native/pull/57700),
-[#57717](https://github.com/facebook/react-native/pull/57717)), which is at 0.88.0-rc.2; 0.87 and
+[#57717](https://github.com/facebook/react-native/pull/57717)), released on 2026-10-15; 0.87 and
 earlier have none. Expo SDK 56 and earlier have none either. SDK 57 ships a scene delegate that an
-app can switch to, and its templates don't use it yet.
+app can switch to, but its templates don't use it. SDK 58 moves to React Native 0.88.
 
 ## What it does
 

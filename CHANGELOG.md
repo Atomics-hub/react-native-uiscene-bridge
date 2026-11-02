@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.1
+
+Docs only. No code changes.
+
+- Adds a "Do you need it?" table: React Native 0.87 or earlier and Expo SDK 57 or earlier need it
+  with Xcode 27; React Native 0.88+ and Expo SDK 58+ on the scene delegate do not.
+- Notes that React Native 0.88 shipped on 2026-10-15 and that Expo SDK 58 moves to it.
+
 ## 0.1.0
 
 First release.

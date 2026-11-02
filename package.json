@@ -1,6 +1,6 @@
 {
   "name": "react-native-uiscene-bridge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Stops React Native and Expo apps built with Xcode 27 from crashing at launch with \"UIScene life cycle is required for apps built with this SDK\". Install it, run pod install, no code changes.",
   "files": [
     "ios",
