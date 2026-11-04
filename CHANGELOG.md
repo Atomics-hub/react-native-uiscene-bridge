@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.2
+
+Docs only. No code changes.
+
+- Adds Expo SDK 57 (React Native 0.86.3) with Expo Router to the tested apps: it launches, links
+  open the right route whether the app is running or not, and it survives a trip to the background.
+- Home-screen quick actions now tested: they reach the app delegate whether the app was running or
+  not.
+- Mac Catalyst checked with a minimal app: it fails the same launch check without the bridge and
+  launches with it.
+
 ## 0.1.1
 
 Docs only. No code changes.

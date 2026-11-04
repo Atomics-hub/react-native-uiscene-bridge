@@ -87,7 +87,10 @@ Xcode 27.0 (27A266a) on macOS 27.0, iPhone 18 Pro simulator on iOS 27.0.
 | --- | --- | --- |
 | React Native 0.86.3, community template | Fails to launch | Renders. `Linking.getInitialURL()` returns the link that launched the app, a link opened while it runs arrives as a `url` event, and `AppState` reports `background` and `active` |
 | Expo SDK 56, default template with Expo Router (React Native 0.85.3) | Fails to launch | Renders. A link that launches the app opens the linked route, and a link opened while it runs navigates |
+| Expo SDK 57, default template with Expo Router (React Native 0.86.3), Xcode 27.1 | Fails to launch | Renders. A link that launches the app opens the linked route, a link opened while it runs navigates, and the app survives a trip to the background |
 | Expo SDK 54, blank template (React Native 0.81.5) | Fails to launch | Renders |
+| Minimal UIKit app with a home-screen quick action | Not run | Choosing the quick action reaches `application:performActionForShortcutItem:completionHandler:`, whether the app was running or not |
+| Minimal UIKit app built for Mac Catalyst, run on macOS 27 | Fails to launch, with the same check | Launches with a key window |
 | Minimal UIKit app on the app-based life cycle | Fails to launch | Launches. The window follows the scene into landscape. Links reach `application:openURL:options:` whether they launch the app or arrive while it runs, and the app delegate's foreground and background methods run as they did before |
 | Apps that declare a scene, in code or in `Info.plist` | | Launch with their own scene delegate. The bridge stays out |
 
@@ -99,9 +102,10 @@ behaviour removed, each fail the check for it.
 
 - Tested in the simulator only, not yet on a device.
 - One window. iPad multiwindow needs real scene support.
-- Universal links, Handoff and home-screen quick actions go through the same forwarding as
-  custom-scheme links, but were not tested.
-- Tested on iOS only. Mac Catalyst builds are untested, and tvOS and visionOS are not supported.
+- Universal links and Handoff go through the same forwarding as custom-scheme links, but were not
+  tested.
+- Mac Catalyst was checked with a minimal app only, not a React Native one. tvOS and visionOS are
+  not supported.
 - It handles the launch requirement. Other errors when building with Xcode 27 are out of scope.
 - Not affiliated with Apple, Meta or Expo.
 
